@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publisher Platform — TikTok Authorization</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a14;
+            color: #fffdd0;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
+        .card {
+            background: #111122;
+            border: 1px solid #1a1a2e;
+            border-radius: 16px;
+            padding: 3rem 4rem;
+            max-width: 480px;
+        }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 3px solid #1a1a2e;
+            border-top-color: #fffdd0;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        h2 { margin: 0 0 0.5rem; font-size: 1.2rem; }
+        p { color: #a8a4a0; font-size: 0.9rem; margin: 0; }
+        .error { display: none; }
+        .error h2 { color: #e05c5c; }
+    </style>
+</head>
+<body>
+    <div class="card" id="loading">
+        <div class="spinner"></div>
+        <h2>Completing TikTok Authorization...</h2>
+        <p>Redirecting to Publisher Platform dashboard.</p>
+    </div>
+    <div class="card error" id="error-card">
+        <h2>❌ Authorization Failed</h2>
+        <p id="error-msg">Could not connect to Publisher Platform dashboard.<br>Make sure it is running at localhost:8000.</p>
+    </div>
+    <script>
+        (function () {
+            var params = window.location.search;  // ?code=...&state=...
+            var target = 'http://localhost:8000/auth/tiktok/callback' + params;
+
+            // Try to redirect; if dashboard is not running, show error after timeout
+            var timeout = setTimeout(function () {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error-card').style.display = 'block';
+            }, 8000);
+
+            // Redirect immediately — if it works, the timeout never fires
+            window.location.href = target;
+        })();
+    </script>
+</body>
+</html>
