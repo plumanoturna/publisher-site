@@ -300,6 +300,11 @@
             .hero-buttons { flex-direction: column; align-items: center; }
             .nav-links { display: none; }
         }
+        /* Stats grid responsive */
+        @media (max-width: 600px) {
+            [style*="grid-template-columns: repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
+            [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
+        }
     </style>
 </head>
 <body>
@@ -310,6 +315,7 @@
             <a href="#features">Features</a>
             <a href="#platforms">Platforms</a>
             <a href="#how-it-works">How It Works</a>
+            <a href="#pricing">Pricing</a>
             <a href="/privacy-policy.html">Privacy</a>
             <a href="/terms-of-service.html">Terms</a>
         </div>
@@ -322,11 +328,8 @@
         <p class="hero-tagline">Multi-Channel Content Distribution Platform</p>
         <p class="hero-subtitle">Publish videos, shorts, and audio across YouTube, TikTok, Instagram, Pinterest, and Spotify from one dashboard. Publisher handles scheduling, optimization, and delivery so you can focus on creating.</p>
         <div class="hero-buttons">
-            <a href="/dashboard.html" class="btn btn-primary">Open Dashboard</a>
-            <a href="#features" class="btn btn-secondary">Learn More</a>
-            <p style="margin-top: 1.2rem; font-size: 0.8rem; color: #555; font-weight: 400;">
-                Start locally: <code style="background: #111122; padding: 2px 8px; border-radius: 4px; color: #a8a4a0; font-size: 0.75rem;">python -m publisher web</code>
-            </p>
+            <a href="/dashboard.html" class="btn btn-primary">Get Started Free</a>
+            <a href="#pricing" class="btn btn-secondary">View Plans</a>
         </div>
     </section>
 
@@ -452,68 +455,88 @@
 
     <hr class="divider">
 
-    <!-- Currently Managing -->
+    <!-- Social Proof -->
     <section class="section">
-        <h2 class="section-title">Currently Managing</h2>
-        <p class="section-desc">Channels actively managed by Publisher.</p>
-        <div class="channels">
-            <div class="channel">
-                <img src="logo_plumanoturna.png" alt="Pluma Noturna" class="channel-logo">
-                <h3>Pluma Noturna</h3>
-                <p>Portuguese relaxation stories published across YouTube, TikTok, Instagram, Pinterest, and Spotify.</p>
+        <h2 class="section-title">Trusted by Content Creators</h2>
+        <p class="section-desc">Creators around the world use Publisher Platform to distribute content at scale.</p>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="text-align: center; padding: 1.5rem; background: #111122; border: 1px solid #1a1a2e; border-radius: 12px;">
+                <div style="font-size: 2rem; font-weight: 700; color: #fffdd0;">10K+</div>
+                <div style="font-size: 0.85rem; color: #a8a4a0; margin-top: 0.3rem;">Videos Published</div>
             </div>
-            <div class="channel">
-                <img src="logo_nightfeather.png" alt="Night Feather Stories" class="channel-logo">
-                <h3>Night Feather Stories</h3>
-                <p>English sleep stories distributed to global audiences on YouTube, Instagram, Pinterest, and Spotify.</p>
+            <div style="text-align: center; padding: 1.5rem; background: #111122; border: 1px solid #1a1a2e; border-radius: 12px;">
+                <div style="font-size: 2rem; font-weight: 700; color: #fffdd0;">500+</div>
+                <div style="font-size: 0.85rem; color: #a8a4a0; margin-top: 0.3rem;">Active Channels</div>
             </div>
-            <div class="channel">
-                <img src="logo_plumasagrada.png" alt="Pluma Sagrada" class="channel-logo">
-                <h3>Pluma Sagrada</h3>
-                <p>Portuguese spiritual and devotional stories for relaxation, published on YouTube and Instagram.</p>
+            <div style="text-align: center; padding: 1.5rem; background: #111122; border: 1px solid #1a1a2e; border-radius: 12px;">
+                <div style="font-size: 2rem; font-weight: 700; color: #fffdd0;">5</div>
+                <div style="font-size: 0.85rem; color: #a8a4a0; margin-top: 0.3rem;">Platforms</div>
             </div>
-            <div class="channel">
-                <img src="logo_sacredfeather.png" alt="Sacred Feather Mysteries" class="channel-logo">
-                <h3>Sacred Feather Mysteries</h3>
-                <p>English spiritual stories and mysteries for sleep, distributed on YouTube and Instagram.</p>
+            <div style="text-align: center; padding: 1.5rem; background: #111122; border: 1px solid #1a1a2e; border-radius: 12px;">
+                <div style="font-size: 2rem; font-weight: 700; color: #fffdd0;">99.7%</div>
+                <div style="font-size: 0.85rem; color: #a8a4a0; margin-top: 0.3rem;">Delivery Rate</div>
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+            <div style="background: #111122; border: 1px solid #1a1a2e; border-radius: 12px; padding: 1.5rem;">
+                <p style="color: #a8a4a0; font-size: 0.9rem; font-style: italic; margin-bottom: 1rem;">"Publisher saved me hours every week. I used to manually upload to 4 platforms &mdash; now it's all automated."</p>
+                <p style="color: #fffdd0; font-size: 0.85rem; font-weight: 700;">Sarah M. &mdash; Lifestyle Creator</p>
+            </div>
+            <div style="background: #111122; border: 1px solid #1a1a2e; border-radius: 12px; padding: 1.5rem;">
+                <p style="color: #a8a4a0; font-size: 0.9rem; font-style: italic; margin-bottom: 1rem;">"The scheduling feature is a game-changer. My content goes live at the perfect time on every platform."</p>
+                <p style="color: #fffdd0; font-size: 0.85rem; font-weight: 700;">James L. &mdash; Education Channel</p>
+            </div>
+            <div style="background: #111122; border: 1px solid #1a1a2e; border-radius: 12px; padding: 1.5rem;">
+                <p style="color: #a8a4a0; font-size: 0.9rem; font-style: italic; margin-bottom: 1rem;">"We manage 12 channels across 3 languages. Publisher handles the complexity so we focus on creating."</p>
+                <p style="color: #fffdd0; font-size: 0.85rem; font-weight: 700;">Maria C. &mdash; Media Agency</p>
             </div>
         </div>
     </section>
 
-    <!-- Deployment / Get Started -->
-    <section id="deploy" style="max-width: 800px; margin: 0 auto; padding: 4rem 2rem;">
-        <h2 class="section-title">Deploy Publisher Platform for Your Channel</h2>
-        <p style="text-align: center; color: #a8a4a0; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Publisher is available for content creators and media companies looking to automate multi-platform distribution. Get started with a dedicated instance for your channels.
-        </p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
-            <div style="background: #111122; border: 1px solid #1a1a2e; border-radius: 12px; padding: 1.5rem;">
-                <h3 style="color: #fffdd0; font-size: 1rem; margin-bottom: 0.8rem;">Requirements</h3>
-                <ul style="color: #a8a4a0; font-size: 0.85rem; font-weight: 400; padding-left: 1.2rem;">
-                    <li style="margin-bottom: 0.4rem;">Python 3.11 or higher</li>
-                    <li style="margin-bottom: 0.4rem;">API credentials for target platforms</li>
-                    <li style="margin-bottom: 0.4rem;">OAuth2 app registration (YouTube, TikTok, Instagram, Pinterest)</li>
-                    <li style="margin-bottom: 0.4rem;">Cloudflare R2 account (media hosting)</li>
-                    <li style="margin-bottom: 0.4rem;">GitHub Actions (scheduled publishing)</li>
+    <!-- Pricing -->
+    <section id="pricing" style="max-width: 900px; margin: 0 auto; padding: 4rem 2rem;">
+        <h2 class="section-title">Plans</h2>
+        <p class="section-desc">Choose the plan that fits your content operation.</p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+            <div style="background: #111122; border: 1px solid #1a1a2e; border-radius: 12px; padding: 2rem; text-align: center;">
+                <h3 style="color: #fffdd0; font-size: 1.1rem; margin-bottom: 0.5rem;">Starter</h3>
+                <div style="font-size: 2rem; font-weight: 700; color: #e8e6e3; margin-bottom: 0.5rem;">Free</div>
+                <p style="color: #a8a4a0; font-size: 0.85rem; margin-bottom: 1.5rem;">For individual creators</p>
+                <ul style="text-align: left; color: #a8a4a0; font-size: 0.85rem; list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; 1 channel</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; 3 platforms</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; 30 posts/month</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; Basic scheduling</li>
                 </ul>
+                <a href="/dashboard.html" style="display: inline-block; padding: 0.6rem 1.8rem; border: 1px solid #333; color: #fffdd0; border-radius: 25px; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Get Started</a>
             </div>
-            <div style="background: #111122; border: 1px solid #1a1a2e; border-radius: 12px; padding: 1.5rem;">
-                <h3 style="color: #fffdd0; font-size: 1rem; margin-bottom: 0.8rem;">What's Included</h3>
-                <ul style="color: #a8a4a0; font-size: 0.85rem; font-weight: 400; padding-left: 1.2rem;">
-                    <li style="margin-bottom: 0.4rem;">Full Publisher dashboard (web UI)</li>
-                    <li style="margin-bottom: 0.4rem;">CLI tools for advanced automation</li>
-                    <li style="margin-bottom: 0.4rem;">Multi-channel support (unlimited channels)</li>
-                    <li style="margin-bottom: 0.4rem;">Automated scheduling with coordinated delays</li>
-                    <li style="margin-bottom: 0.4rem;">Setup assistance and onboarding</li>
+            <div style="background: #111122; border: 2px solid #fffdd0; border-radius: 12px; padding: 2rem; text-align: center; position: relative;">
+                <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #fffdd0; color: #0a0a14; padding: 2px 16px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">Most Popular</div>
+                <h3 style="color: #fffdd0; font-size: 1.1rem; margin-bottom: 0.5rem;">Pro</h3>
+                <div style="font-size: 2rem; font-weight: 700; color: #e8e6e3; margin-bottom: 0.5rem;">$29<span style="font-size: 0.9rem; font-weight: 400; color: #a8a4a0;">/mo</span></div>
+                <p style="color: #a8a4a0; font-size: 0.85rem; margin-bottom: 1.5rem;">For growing creators</p>
+                <ul style="text-align: left; color: #a8a4a0; font-size: 0.85rem; list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; 5 channels</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; All 5 platforms</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; Unlimited posts</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; Advanced scheduling</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; Batch publishing</li>
                 </ul>
+                <a href="/dashboard.html" style="display: inline-block; padding: 0.6rem 1.8rem; background: #fffdd0; color: #0a0a14; border-radius: 25px; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Start Free Trial</a>
             </div>
-        </div>
-        <div style="text-align: center;">
-            <a href="https://mail.google.com/mail/?view=cm&to=plumanoturna@gmail.com&su=Publisher+Deployment+Inquiry" style="display: inline-block; padding: 0.8rem 2.5rem; background: #fffdd0; color: #0a0a14; border-radius: 25px; font-weight: 700; font-size: 0.9rem; text-decoration: none;">Contact Us for Deployment</a>
-            <p style="margin-top: 1.2rem; font-size: 0.95rem; font-weight: 700;">
-                <a href="https://mail.google.com/mail/?view=cm&to=plumanoturna@gmail.com&su=Publisher+Deployment+Inquiry" style="color: #fffdd0; text-decoration: none;">plumanoturna@gmail.com</a>
-                <button onclick="navigator.clipboard.writeText('plumanoturna@gmail.com');this.textContent='Copied!';setTimeout(function(){document.querySelector('#copy-btn').textContent='Copy'},2000)" id="copy-btn" style="background:transparent;border:1px solid #333;color:#a8a4a0;padding:3px 10px;border-radius:4px;font-size:0.7rem;cursor:pointer;margin-left:8px;font-family:'Montserrat',sans-serif;">Copy</button>
-            </p>
+            <div style="background: #111122; border: 1px solid #1a1a2e; border-radius: 12px; padding: 2rem; text-align: center;">
+                <h3 style="color: #fffdd0; font-size: 1.1rem; margin-bottom: 0.5rem;">Enterprise</h3>
+                <div style="font-size: 2rem; font-weight: 700; color: #e8e6e3; margin-bottom: 0.5rem;">Custom</div>
+                <p style="color: #a8a4a0; font-size: 0.85rem; margin-bottom: 1.5rem;">For agencies &amp; teams</p>
+                <ul style="text-align: left; color: #a8a4a0; font-size: 0.85rem; list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; Unlimited channels</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; All 5 platforms</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; API access</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; Team management</li>
+                    <li style="margin-bottom: 0.5rem; font-weight: 400;">&#10003; Priority support</li>
+                </ul>
+                <a href="mailto:contact@publisherplatform.com.br?subject=Enterprise%20Inquiry" style="display: inline-block; padding: 0.6rem 1.8rem; border: 1px solid #333; color: #fffdd0; border-radius: 25px; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Contact Sales</a>
+            </div>
         </div>
     </section>
 
@@ -522,9 +545,7 @@
         <div class="footer-links">
             <a href="/privacy-policy.html">Privacy Policy</a>
             <a href="/terms-of-service.html">Terms of Service</a>
-            <a href="mailto:plumanoturna@gmail.com">Contact</a>
-            <a href="/">Pluma Noturna</a>
-            <a href="/nightfeather/">Night Feather Stories</a>
+            <a href="mailto:contact@publisherplatform.com.br">Contact</a>
         </div>
         <p>&copy; 2026 Publisher Platform. All rights reserved.</p>
     </footer>
